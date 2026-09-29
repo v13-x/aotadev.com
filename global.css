@@ -1,0 +1,180 @@
+@import url(static/styles/classes.css);
+@import url(static/styles/ids.css);
+
+@font-face {
+
+    font-family: 'JetBrains Mono', monospace;
+    src: local('Itim Regular'), url(/assets/fonts/JetBrainsMono-Regular.ttf) format('truetype');
+
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+:root {
+    --background-color: #16161D;
+    --panel-color: #29262B;
+
+    --main-color: #E6DED5;
+    --highlight-color: #C3BFEE;
+    --sub-color: #A9A19B;
+
+    --red-color: #f19c9c;
+    --orange-color: #F0B387;
+    --yellow-color: #ECEC9C;
+    --green-color: #a1dba1;
+    --blue-color: #A2BAF5;
+    --purple-color: #c3a1ec;
+
+    font-family: 'JetBrains Mono', monospace;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+
+    background-color: var(--background-color);
+    color: var(--main-color);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    margin: 0;
+    padding: 0;
+
+    display: block;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.333rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.167rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    font-size: 1.167rem;
+    color: var(--sub-color);
+    text-align: justify;
+}
+
+a {
+    margin: 0;
+    font-size: 1.167rem;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+button {
+    background: none;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+}
+
+@media (max-width: 2080px){
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1760px){
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1440px){
+    html {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1120px){
+    html {
+        font-size: 10px;
+    }
+}
+
+/*@media (max-width: 800px){
+    html {
+        font-size: 12px;
+    }
+}*/
+
+/* Color hover */
+
+.highlight-hover:hover {
+    color: var(--highlight-color);
+}
+
+.red-hover:hover {
+    color: var(--red-color);
+}
+
+.orange-hover:hover {
+    color: var(--orange-color);
+}
+
+.yellow-hover:hover {
+    color: var(--yellow-color);
+}
+
+.green-hover:hover {
+    color: var(--green-color);
+}
+
+.blue-hover:hover {
+    color: var(--blue-color);
+}
+
+.purple-hover:hover {
+    color: var(--purple-color);
+}
+
+/* BG Color hover */
+
+.bg-highlight-hover:hover {
+    background-color: var(--highlight-color);
+}
+
+.bg-red-hover:hover {
+    background-color: var(--red-color);
+}
+
+.bg-orange-hover:hover {
+    background-color: var(--orange-color);
+}
+
+.bg-yellow-hover:hover {
+    background-color: var(--yellow-color);
+}
+
+.bg-green-hover:hover {
+    background-color: var(--green-color);
+}
+
+.bg-blue-hover:hover {
+    background-color: var(--blue-color);
+}
+
+.bg-purple-hover:hover {
+    background-color: var(--purple-color);
+}

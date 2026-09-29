@@ -1,0 +1,33 @@
+/* Main */
+
+.selected.tab#about_tab {
+    color: var(--highlight-color);
+}
+
+.selected.tab#content_tab {
+    color: var(--red-color);
+}
+
+.selected.tab#development_tab {
+    color: var(--green-color);
+}
+
+.selected.tab#contacts_tab {
+    color: var(--blue-color);
+}
+
+/* About */
+
+#about_content {
+    flex-direction: row;
+}
+
+#about_content h1 {
+    color: var(--highlight-color);
+}
+
+/* Content */
+
+/* Development */
+
+/* Contacts */
