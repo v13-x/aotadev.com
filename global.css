@@ -4,8 +4,30 @@
 @font-face {
 
     font-family: 'JetBrains Mono', monospace;
-    src: local('Itim Regular'), url(/assets/fonts/JetBrainsMono-Regular.ttf) format('truetype');
+    src: url(static/fonts/JetBrainsMono-Regular.ttf) format('truetype');
 
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutSlide {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
 }
 
 * {
@@ -15,6 +37,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
 }
 
 :root {
@@ -24,6 +47,7 @@
     --main-color: #E6DED5;
     --highlight-color: #C3BFEE;
     --sub-color: #A9A19B;
+    --hidden-color: #888280;
 
     --red-color: #f19c9c;
     --orange-color: #F0B387;
@@ -32,7 +56,10 @@
     --blue-color: #A2BAF5;
     --purple-color: #c3a1ec;
 
+    --viewport-height: 100vh;
+
     font-family: 'JetBrains Mono', monospace;
+    interpolate-size: allow-keywords;
 }
 
 html {
@@ -45,25 +72,27 @@ html {
 }
 
 body {
+    display: block;
+
     width: 100vw;
-    height: 100vh;
+    height: var(--viewport-height);
     
     margin: 0;
     padding: 0;
 
-    display: block;
+    overflow-x: hidden;
 }
 
 h1 {
     margin: 0;
-    font-size: 1.333rem;
+    font-size: 2rem;
     color: var(--main-color);
     text-align: center;
 }
 
 h2 {
     margin: 0;
-    font-size: 1.167rem;
+    font-size: 1.333rem;
     color: var(--main-color);
     text-align: center;
 }
@@ -78,8 +107,8 @@ p {
 a {
     margin: 0;
     font-size: 1.167rem;
-    text-decoration: none;
     color: var(--main-color);
+    cursor: pointer;
 }
 
 button {
@@ -87,6 +116,8 @@ button {
     border-radius: 0;
     border: none;
     padding: 0;
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 @media (max-width: 2080px){
@@ -113,11 +144,41 @@ button {
     }
 }
 
-/*@media (max-width: 800px){
+@media (max-width: 800px){
     html {
-        font-size: 12px;
+        font-size: 9px;
     }
-}*/
+}
+
+/* Text Colot */
+
+.highlight-text {
+    color: var(--highlight-color);
+}
+
+.red-text {
+    color: var(--red-color);
+}
+
+.orange-text {
+    color: var(--orange-color);
+}
+
+.yellow-text {
+    color: var(--yellow-color);
+}
+
+.green-text {
+    color: var(--green-color);
+}
+
+.blue-text {
+    color: var(--blue-color);
+}
+
+.purple-text {
+    color: var(--purple-color);
+}
 
 /* Color hover */
 

@@ -15,59 +15,179 @@
         <div class="main-container">
             <div class="main">
                 <div class="tab-container" id="tab_container">
-                    <a href="#about" class="tab highlight-hover" id="about_tab">About Me</a>
-
-                    <div class="vertical-line"></div>
-
-                    <a href="#content" class="tab red-hover" id="content_tab">Content</a>
-
-                    <div class="vertical-line"></div>
-
-                    <a href="#development" class="tab green-hover" id="development_tab">Development</a>
-
-                    <div class="vertical-line"></div>
-
-                    <a href="#contacts" class="tab blue-hover" id="contacts_tab">Contacts</a>
+                    <button target-id="about_panel" class="tab selected highlight-hover" id="about_tab">About Me</button>
+                    <div class="tab-separator"><div class="vertical-line"></div></div>
+                    <button target-id="content_panel" class="tab red-hover" id="content_tab">Content</button>
+                    <div class="tab-separator"><div class="vertical-line"></div></div>
+                    <button target-id="development_panel" class="tab green-hover" id="development_tab">Development</button>
+                    <div class="tab-separator"><div class="vertical-line"></div></div>
+                    <button target-id="contacts_panel"" class="tab blue-hover" id="contacts_tab">Contacts</button>
                 </div>
 
-                <div class="horizontal-line"></div>
+                <div class="main-separator">
+                    <div class="horizontal-line"></div>
+                </div>
 
-                <div class="content-container" id="content_container">
-                    <div class="content" id="about_content">
+                <div class="panel-container" id="panel_container">
+                    <div class="panel normal-panel active" id="about_panel">
                         <div class="horizontal-block">
                             <div class="vertical-block">
                                 <div class="info-block">
-                                    <h1 class="info-head">Aota | he | 20 | Eng/Fil</h1>
+                                    <h2 class="info-head">Aota | he | 20 | Eng/Fil</h2>
                                     <p class="info-body">Heya, I’m Aota! I mainly do game, web, and software development, but I also partake in other hobbies such as content creation and art!</p>
                                 </div>
                                 <div class="button-container">
+                                    <a href="https://bsky.app/profile/vixoat.me" class="icon-button bg-blue-hover">
+                                        <img class="icon" src="static/images/icons/icon_bsky.svg" alt="Bluesky">
+                                    </a>
                                     <a href="https://www.twitch.tv/aota_dev" class="icon-button bg-purple-hover">
-                                        <img class="icon" src="static/images/icons/icon_twitch.svg">
+                                        <img class="icon" src="static/images/icons/icon_twitch.svg" alt="Twitch">
                                     </a>
                                     <a href="https://www.youtube.com/@vixoat" class="icon-button bg-red-hover">
-                                        <img class="icon" src="static/images/icons/icon_yt.svg">
+                                        <img class="icon" src="static/images/icons/icon_yt.svg" alt="YouTube">
                                     </a>
                                     <a href="https://ko-fi.com/vixoat" class="icon-button bg-orange-hover">
-                                        <img class="icon" src="static/images/icons/icon_kofi.svg">
+                                        <img class="icon" src="static/images/icons/icon_kofi.svg" alt="Kofi">
                                     </a>
                                     <a href="#about" class="icon-button bg-blue-hover">
-                                        <img class="icon" src="static/images/icons/icon_discord.svg">
+                                        <img class="icon" src="static/images/icons/icon_discord.svg" alt="Discord">
                                     </a>
                                 </div>
                             </div>
-                            <img class="portrait" src="static/images/Round.png">
+                            <img class="big-portrait" src="static/images/Round.png">
                         </div>
                     </div>
 
-                    <div class="content" id="content_content">
+                    <div class="panel" id="content_panel">
+                        <div class="sub-panel big-panel active" id="content_main_sub_panel">
+                            <div class="horizontal-block">
+                                <div class="vertical-block gap-1rem">
+                                    <div class="info-block">
+                                        <h2 class="info-head purple-text">Twitch</h2>
+                                        <p class="info-body">I often stream gaming content on Twitch. Though sometimes I may do other things or just talk. Come say hi!</p>
+                                    </div>
+                                    <div class="iframe-wrapper">
+                                        <iframe src="https://player.twitch.tv/?channel=aota_dev&parent=127.0.0.1" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+                                    </div>
+                                    <a href="https://www.twitch.tv/aota_dev" class="text-button bg-purple-hover">Visit Twitch Channel</a>
+                                </div>
+                                <div class="vertical-block gap-1rem">
+                                    <div class="info-block">
+                                        <h2 class="info-head red-text">Youtube</h2>
+                                        <p class="info-body">Every now and then I may upload videos to Youtube. As of right now though there's just some random stuff on there :p</p>
+                                    </div>
+                                    <div class="iframe-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/BVJAEVImEYA?si=wsQcOue20A0FIwTe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" scrolling="no" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="https://www.youtube.com/@vixoat" class="text-button bg-red-hover">Visit Youtube Channel</a>
+                                </div>
+                            </div>
+
+                            <div class="vertical-block">
+                                <div class="info-block">
+                                    <h2 class="info-head blue-text">Discord Community</h2>
+                                    <p class="info-body">I have a community server where I send stream schedules and new upload announcements. Feel free to join us to get notified of any new content and to become part of our awesome community!</p>
+                                </div>
+                                <a class="text-button bg-blue-hover">Join the Community</a>
+                            </div>
+
+                            <div class="bottom-container">
+                                <button target-id="content_credits_sub_panel" class="sub-tab">Tools and Credits &gt;</button>
+                            </div>
+                        </div>
+
+                        <div class="sub-panel" id="content_credits_sub_panel">
+                            <div class="top-container">
+                                <button target-id="content_main_sub_panel" class="sub-tab">&lt; Go Back</button>
+                            </div>
+
+                            <div class="vertical-block">
+                                <h1>Art Credits</h1>
+                                <!-- Cozmoth -->
+                                <div class="horizontal-block">
+                                    <img class="portrait" src="static/images/portraits/Cozmoth.png" alt="Cozmoth">
+                                    <div class="info-block">
+                                        <h2 class="info-head start-align">Cozmoth
+                                            <a href="https://cozmoth-comms.carrd.co/" class="small-icon-button bg-blue-hover">
+                                                <img class="small-icon" src="static/images/icons/icon_carrd.svg" alt="Carrd">
+                                            </a>
+                                        </h2>
+                                        <p class="info-body">Drew all PNGTuber avatars including the default avatar and maid outfit.</p>
+                                    </div>
+                                </div>
+                                <!-- Virtdot -->
+                                <div class="horizontal-block">
+                                    <img class="portrait" src="static/images/portraits/virtdot.png" alt="Virtdot">
+                                    <div class="info-block">
+                                        <h2 class="info-head start-align">Virtdot
+                                            <a href="https://ko-fi.com/virtdotco/commissions" class="small-icon-button bg-orange-hover">
+                                                <img class="small-icon" src="static/images/icons/icon_kofi.svg" alt="Kofi">
+                                            </a>
+                                        </h2>
+                                        <p class="info-body">Drew all Twitch and Discord emotes.</p>
+                                    </div>
+                                </div>
+                                <!-- Darlart -->
+                                <div class="horizontal-block">
+                                    <img class="portrait" src="static/images/portraits/Darlart.png" alt="Darlart">
+                                    <div class="info-block">
+                                        <h2 class="info-head start-align">Darlart
+                                            <a href="https://linktr.ee/darlart_" class="small-icon-button bg-green-hover">
+                                                <img class="small-icon" src="static/images/icons/icon_linktree.svg" alt="Linktree">
+                                            </a>
+                                        </h2>
+                                        <p class="info-body">Drew my user PFP on Discord, Twitch, and the Discord server icon.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="vertical-block">
+                                <h1>Sounds and Music</h1>
+                                <div class="two-columns">
+                                    <div class="info-block">
+                                        <h2 class="info-head">Music</h2>
+                                        <p class="info-body">Music during intermissions and quiet moments are from Pixabay. No AI music will ever be used on any of my content.</p>
+                                    </div>
+                                    <div class="info-block">
+                                        <h2 class="info-head">SFX</h2>
+                                        <p class="info-body">Sound effects used in alerts and interactions are from Pixabay. No AI made SFX will ever be used on any of my content.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="vertical-block">
+                                <h1>Programs Used</h1>
+                                <div class="credits-roll">
+                                    <div class="credits-row">
+                                        <p class="credits-name">OBS Studio</p>
+                                        <p class="credits-title">Recording/Streaming Software</p>
+                                    </div>
+                                    <div class="credits-row">
+                                        <p class="credits-name">DaVinci Resolve</p>
+                                        <p class="credits-title">Video Editing Software</p>
+                                    </div>
+                                    <div class="credits-row">
+                                        <p class="credits-name">Veadotube Mini</p>
+                                        <p class="credits-title">PNGTuber Software</p>
+                                    </div>
+                                    <div class="credits-row">
+                                        <p class="credits-name">Streamlabs</p>
+                                        <p class="credits-title">Streaming Utilities</p>
+                                    </div>
+                                    <div class="credits-row">
+                                        <p class="credits-name">Paint.Net & Figma</p>
+                                        <p class="credits-title">Illustrations and Photo Editing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel" id="development_panel">
                         
                     </div>
 
-                    <div class="content" id="development_content">
-                        
-                    </div>
-
-                    <div class="content" id="contacts_content">
+                    <div class="panel" id="contacts_panel">
                         
                     </div>
                 </div>
@@ -75,5 +195,5 @@
         </div>
     </div>
 
-    <script src="scripts/tab-navigation.js"></script>
+    <script src="scripts/navigation.js"></script>
 </body>

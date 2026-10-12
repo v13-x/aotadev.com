@@ -18,15 +18,19 @@
 
 /* About */
 
-#about_content {
+#about_panel {
     flex-direction: row;
 }
 
-#about_content h1 {
+#about_panel h2 {
     color: var(--highlight-color);
 }
 
 /* Content */
+
+#content_credits_sub_panel .horizontal-block {
+    padding: 0 6rem;
+}
 
 /* Development */
 
