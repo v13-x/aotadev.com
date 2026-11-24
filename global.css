@@ -93,6 +93,13 @@ h1 {
 
 h2 {
     margin: 0;
+    font-size: 1.667rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
     font-size: 1.333rem;
     color: var(--main-color);
     text-align: center;

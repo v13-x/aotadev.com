@@ -12,7 +12,7 @@
     color: var(--green-color);
 }
 
-.selected.tab#contacts_tab {
+.selected.tab#contact_tab {
     color: var(--blue-color);
 }
 
@@ -22,7 +22,7 @@
     flex-direction: row;
 }
 
-#about_panel h2 {
+#about_panel h3 {
     color: var(--highlight-color);
 }
 
