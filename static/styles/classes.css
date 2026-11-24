@@ -44,6 +44,15 @@
 
 .tab-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    width: 100%;
+    height: fit-content;
+}
+.tab-list {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
@@ -101,18 +110,6 @@
     width: fit-content;
     height: fit-content;
     padding: 2rem;
-    gap: 3rem;
-}
-
-.sub-panel {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 49.333rem;
-    height: fit-content;
-    padding: 0;
     gap: 3rem;
 }
 
@@ -306,10 +303,10 @@
 }
 
 .iframe-wrapper iframe {
-    width: calc(25.6rem / 0.6);
-    height: calc(14.4rem / 0.6);
+    width: calc(25.6rem / 0.67);
+    height: calc(14.4rem / 0.67);
 
-    transform: scale(0.6);
+    transform: scale(0.67);
 
     transform-origin: 0 0;
     border: none;
@@ -324,7 +321,7 @@
     box-sizing: border-box;
     width: 100%;
     height: fit-content;
-    /* padding: 1.333rem; */
+    padding: 1.333rem;
 
     position: absolute;
     top: 0;
@@ -345,7 +342,7 @@
     box-sizing: border-box;
     width: 100%;
     height: fit-content;
-    /* padding: 1.333rem; */
+    padding: 1.333rem;
 
     position: absolute;
     bottom: 0;
@@ -369,12 +366,16 @@
 
 .credits-row {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 5fr 8fr;
     justify-content: center;
     align-items: flex-start;
     gap: 0.667rem;
 
     width: 100%;
+}
+
+.credits-roll.aligned-middle .credits-row {
+    grid-template-columns: 8fr 9fr;
 }
 
 .credits-name {

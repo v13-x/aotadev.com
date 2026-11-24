@@ -42,7 +42,7 @@
 
 :root {
     --background-color: #16161D;
-    --panel-color: #29262B;
+    --panel-color: #21212B;
 
     --main-color: #E6DED5;
     --highlight-color: #C3BFEE;
@@ -108,6 +108,7 @@ a {
     margin: 0;
     font-size: 1.167rem;
     color: var(--main-color);
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -118,6 +119,10 @@ button {
     padding: 0;
     color: var(--main-color);
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 2080px){
@@ -150,7 +155,7 @@ button {
     }
 }
 
-/* Text Colot */
+/* Text Color */
 
 .highlight-text {
     color: var(--highlight-color);

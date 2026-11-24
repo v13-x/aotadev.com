@@ -1,34 +1,53 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const mainPanels = document.querySelectorAll('.panel');
-    const mainTabs = document.querySelectorAll('.tab');
-    const subTabs = document.querySelectorAll('.sub-tab');
+const r = document.querySelector(':root');
+const contentContainer = document.getElementById('panel_container');
+const tabContainer = document.getElementById('tab_container');
 
-    // Tab Navigation
-    mainTabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            targetId = tab.getAttribute("target-id");
-            targetPanel = document.getElementById(targetId);
+window.addEventListener("hashchange", HashChanged);
+let currentHash = location.hash;
+let hasTab = false
 
-            mainTabs.forEach(btn => {btn.classList.remove("selected")});
-            mainPanels.forEach(panel => {panel.classList.remove("active")});
-            
-            tab.classList.add("selected");
-            targetPanel.classList.add("active");
-        });
+function HashChanged() {
+    currentHash = location.hash ?? "#about";
+
+    var i = 0;
+    contentContainer.querySelectorAll(".panel").forEach(page => {
+        i++;
+        var isActive = UpdateContent(page);
+        if (isActive) r.style.setProperty('--active-tab', i);
     });
 
-    // Subtab Navigation
-    subTabs.forEach(subTab => {
-        subTab.addEventListener("click", () => {
-            parentPanel = subTab.closest(".panel");
-            subPanels = parentPanel.querySelectorAll(".sub-panel");
-            
-            targetId = subTab.getAttribute("target-id");
-            targetPanel = document.getElementById(targetId);
+    hasTab = false
+    tabContainer.querySelectorAll(".tab").forEach(UpdateTabs);
 
-            subPanels.forEach(panel => {panel.classList.remove("active")});
-            
-            targetPanel.classList.add("active");
-        });
-    });
-});
+    if (hasTab && tabContainer.classList.contains("hidden")) {
+        tabContainer.classList.remove("hidden")
+    } else if (!hasTab && !tabContainer.classList.contains("hidden")) {
+        tabContainer.classList.add("hidden")
+    }
+}
+
+function UpdateContent(page) {
+    if (page.classList.contains("active")) {
+        page.classList.remove("active");
+    }
+
+    if (currentHash + "_panel" == "#" + page.id) {
+        page.classList.add("active");
+        return true
+    }
+
+    return false
+}
+
+function UpdateTabs(tab) {
+    if (tab.classList.contains("selected")) {
+        tab.classList.remove("selected");
+    }
+    
+    if (currentHash + "_tab" == "#" + tab.id) {
+        tab.classList.add("selected");
+        hasTab = true;
+    }
+}
+
+HashChanged()
