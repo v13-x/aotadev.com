@@ -113,6 +113,11 @@
     gap: 3rem;
 }
 
+.small-panel {
+    box-sizing: content-box;
+    width: 41.667rem;
+}
+
 .normal-panel {
     box-sizing: content-box;
     width: 49.333rem;

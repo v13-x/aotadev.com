@@ -1,5 +1,6 @@
 @import url(static/styles/classes.css);
 @import url(static/styles/ids.css);
+@import url(static/styles/mobile.css);
 
 @font-face {
 
@@ -149,7 +150,7 @@ button {
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 520px){
     html {
         font-size: 9px;
     }

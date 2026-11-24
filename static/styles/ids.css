@@ -28,10 +28,14 @@
 
 /* Content */
 
-#content_credits_sub_panel .horizontal-block {
+#content_panel .horizontal-block {
     padding: 0 6rem;
 }
 
 /* Development */
 
 /* Contacts */
+
+#contact_panel p {
+    text-align: center;
+}

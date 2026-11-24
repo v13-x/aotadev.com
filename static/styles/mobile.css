@@ -1,0 +1,59 @@
+/* You FAHking mobile users smh */
+
+@media (max-width: 768px){
+
+    .tab {
+        font-size: 1.5rem;
+    }
+    
+    .small-panel {
+        width: 33.333rem;
+    }
+    
+    .normal-panel {
+        width: 39.466rem;
+    }
+
+    .big-panel {
+        width: 44.8rem;
+    }
+
+    .iframe-wrapper {
+        width: 38.4rem;
+        height: 21.6rem;
+    }
+
+    .iframe-wrapper iframe {
+        width: calc(38.4rem / 0.67);
+        height: calc(21.6rem / 0.67);
+    }
+
+    /* About */
+
+    #about_panel .horizontal-block {
+        flex-direction: column-reverse;
+    }
+
+    #about_panel .big-portrait {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 0;
+    }
+
+    /* Content */
+
+    #content_panel .horizontal-block {
+        padding: 0 1rem;
+    }
+
+    #content_panel .horizontal-block {
+        flex-direction: column-reverse;
+    }
+
+    #content_panel.big-panel {
+        box-sizing: content-box;
+        width: 39.466rem;
+    }
+
+    /* Contact */
+}
