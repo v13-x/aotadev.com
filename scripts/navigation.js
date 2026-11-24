@@ -4,7 +4,7 @@ const tabContainer = document.getElementById('tab_container');
 
 window.addEventListener("hashchange", HashChanged);
 let currentHash = location.hash;
-let hasTab = false
+let hasTab = false;
 
 function HashChanged() {
     currentHash = location.hash == "" ? "#about" : location.hash;
@@ -16,13 +16,13 @@ function HashChanged() {
         if (isActive) r.style.setProperty('--active-tab', i);
     });
 
-    hasTab = false
+    hasTab = false;
     tabContainer.querySelectorAll(".tab").forEach(UpdateTabs);
 
     if (hasTab && tabContainer.classList.contains("hidden")) {
-        tabContainer.classList.remove("hidden")
+        tabContainer.classList.remove("hidden");
     } else if (!hasTab && !tabContainer.classList.contains("hidden")) {
-        tabContainer.classList.add("hidden")
+        tabContainer.classList.add("hidden");
     }
 }
 
@@ -33,10 +33,10 @@ function UpdateContent(page) {
 
     if (currentHash + "_panel" == "#" + page.id) {
         page.classList.add("active");
-        return true
+        return true;
     }
 
-    return false
+    return false;
 }
 
 function UpdateTabs(tab) {
@@ -50,4 +50,4 @@ function UpdateTabs(tab) {
     }
 }
 
-HashChanged()
+HashChanged();
