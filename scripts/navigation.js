@@ -7,7 +7,7 @@ let currentHash = location.hash;
 let hasTab = false
 
 function HashChanged() {
-    currentHash = location.hash ?? "#about";
+    currentHash = location.hash == "" ? "#about" : location.hash;
 
     var i = 0;
     contentContainer.querySelectorAll(".panel").forEach(page => {
