@@ -48,7 +48,7 @@
     --main-color: #E6DED5;
     --highlight-color: #C3BFEE;
     --sub-color: #A9A19B;
-    --hidden-color: #888280;
+    --hidden-color: #837c7a;
 
     --red-color: #f19c9c;
     --orange-color: #F0B387;
@@ -191,6 +191,10 @@ button {
 
 .purple-text {
     color: var(--purple-color);
+}
+
+.hidden-text {
+    color: var(--hidden-color);
 }
 
 /* Color hover */

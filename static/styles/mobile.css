@@ -64,4 +64,8 @@
     }
 
     /* Contact */
+
+    #contact_panel.small-panel {
+        width: 36.5rem;
+    }
 }
