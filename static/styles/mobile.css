@@ -40,6 +40,13 @@
         height: calc(21.6rem / 0.67);
     }
 
+    .design {
+        left: 16px;
+        bottom: 8px;
+        width: 280px;
+        height: 280px;
+    }
+
     /* About */
 
     #about_panel .horizontal-block {

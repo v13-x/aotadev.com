@@ -12,7 +12,7 @@
 @keyframes fadeInSlide {
     from {
         opacity: 0;
-        transform: translateX(-1rem);
+        transform: translateX(-.5rem);
     }
     to {
         opacity: 1;
@@ -27,7 +27,7 @@
     }
     to {
         opacity: 0;
-        transform: translateX(-1rem);
+        transform: translateX(-.5rem);
     }
 }
 
@@ -44,11 +44,12 @@
 :root {
     --background-color: #16161D;
     --panel-color: #21212B;
+    --design-color: #1c1c24;
 
     --main-color: #E6DED5;
     --highlight-color: #C3BFEE;
     --sub-color: #A9A19B;
-    --hidden-color: #837c7a;
+    --hidden-color: #a9a19b7f;
 
     --red-color: #f19c9c;
     --orange-color: #F0B387;
@@ -118,6 +119,7 @@ a {
     color: var(--main-color);
     text-decoration: none;
     cursor: pointer;
+    transition: color 0.4s ease;
 }
 
 button {
